@@ -2,6 +2,7 @@
 function calculateAverage(n1, n2, n3){
     return (n1 + n2 + n3) / 3;
 }
+
 /* convert an alphabetic grade to a numeric grade */
 function convertAlphaToNumeric(GPA) {
     var grades = ["A","B","C","D"];

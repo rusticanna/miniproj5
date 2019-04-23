@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Grades</title>
+    <script src="miniproj5.js"></script>
 </head>
 <body>
     <form>
         <label>Physics </label>
-        <select required>
+        <select id="Physics" required>
             <option>A</option>
             <option>B</option>
             <option>C</option>
@@ -15,7 +16,7 @@
         </select>
         <br />
         <label>Math </label>
-        <select required>
+        <select id="Math" required>
             <option>A</option>
             <option>B</option>
             <option>C</option>
@@ -23,16 +24,24 @@
         </select>
         <br />
         <label>Chemistry </label>
-        <select required>
+        <select id="Chemistry" required>
             <option>A</option>
             <option>B</option>
             <option>C</option>
             <option>D</option>
         </select>
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit" onclick="showAverage()">Submit</button>
     </form>
     <!-- if I have tapped the Submit button and have 3 grades to process, then write the user's average GPA on the screen -->
-    <script>document.write(myGPA("A","B","C"))</script>
+    <script>
+        function showAverage() {
+            var markPhysics, markMath, markChemistry;
+            markPhysics = document.getElementById("Physics").value;
+            markMath = document.getElementById("Math").value;
+            markChemistry = document.getElementById("Chemistry").value;
+            document.write("Average GPA: " + myGPA(markPhysics,markMath,markChemistry));
+        }
+    </script>
 </body>
 </html>
